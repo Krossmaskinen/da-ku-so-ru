@@ -1,0 +1,8 @@
+{
+  "name": "Dark Souls 3",
+  "description": "da-ku so-ru",
+  "repository": "https://github.com/krossmaskinen/da-ku-so-ru",
+  "logo": "",
+  "keywords": ["dark", "souls", "praising"],
+  "image": "heroku/nodejs"
+}
