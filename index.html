@@ -9,21 +9,30 @@
     <div id="solaire">
         <img src="solaire.png" alt="">
     </div>
+    <div id="intense">
+        <img src="Praising_Intensifies.gif" alt="">
+    </div>
     <h1 class="main-title">ダークソウル Dāku Sōru (3)</h1>
     <div class="main-content">
-        <h2 class="time"></h2>
+        <div class="time">
+            <div>Praising begins in:</div>
+            <h2 class="seconds"></h2>
+            <div>seconds</div>
+        </div>
     </div>
 
     <script>
-        var timeElement = document.querySelector('.time'),
+        var timeElement = document.querySelector('.seconds'),
             releaseDate = new Date(2016, 3, 12),
             title = document.querySelector('title'),
             dateDiff,
-            Solaire = $('#solaire');
+            Solaire = $('#solaire'),
+            intense = $('#intense');
 
         setInterval(updateTime, 50);
 
         praiseTheSun();
+        intensify();
 
         function updateTime() {
             var currentDate = new Date();
@@ -42,6 +51,15 @@
                 Solaire.animate({
                     'bottom': '0'
                 }, 1000, praiseTheSun);
+            });
+        }
+        function intensify() {
+            intense.animate({
+                'bottom': '0'
+            }, 3000, function() {
+                intense.animate({
+                    'bottom': '-209px'
+                }, 3000, intensify);
             });
         }
     </script>
@@ -92,7 +110,12 @@
         }
         .time {
             color: red;
+            font-weight: normal;
+            font-size: 50px;
+        }
+        .seconds {
             font-size: 130px;
+            margin: 0;
             font-weight: normal;
         }
         #solaire {
@@ -103,6 +126,11 @@
         }
         #solaire img {
             width: 100%;
+        }
+        #intense {
+            position: absolute;
+            bottom: -209px;
+            right: 0;
         }
     </style>
 </body>
