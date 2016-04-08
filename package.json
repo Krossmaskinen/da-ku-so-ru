@@ -1,0 +1,25 @@
+{
+  "name": "darksouls3",
+  "version": "1.0.0",
+  "description": "dark souls 3 timer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krossmaskinen/da-ku-so-ru.git"
+  },
+  "keywords": [
+    "darksouls3"
+  ],
+  "author": "bill/kasper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krossmaskinen/da-ku-so-ru/issues"
+  },
+  "homepage": "https://github.com/Krossmaskinen/da-ku-so-ru#readme",
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}
